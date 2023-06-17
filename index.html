@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Operaciones</title>
+  <script>
+    function realizarOperacion() {
+      var input1 = parseFloat(document.getElementById("numero1").value);
+      var input2 = parseFloat(document.getElementById("numero2").value);
+      var input3 = parseFloat(document.getElementById("numero3").value);
+      var resultado = 0;
+      var operacion = "";
+
+      if (input1 > input3) {
+        resultado = input1 * input2 * input3;
+        operacion = "Multiplicación";
+      } else if (input1 === input2) {
+        resultado = input1 + input2 + input3;
+        operacion = "Suma";
+      }
+
+    document.getElementById("resultado").innerHTML = operacion + ": " + resultado;
+    }
+
+    function unirTexto() {
+      var input1 = parseFloat(document.getElementById("numero1").value);
+      var input2 = parseFloat(document.getElementById("numero2").value);
+      var input3 = parseFloat(document.getElementById("numero3").value);
+      var resultado = "";
+
+      for (var i = 0; i < (input1 * input2 + input3); i++) {
+        resultado += input1 + " " + input2 + " " + input3 + " ";
+      }
+
+    document.getElementById("resultadoTexto").innerHTML = resultado;
+    }
+  </script>
+</head>
+<body>
+  <input type="number" name="numero1" id="numero1">
+  <br><br>
+  <input type="number" name="numero2" id="numero2">
+  <br><br>
+  <input type="number" name="numero3" id="numero3">
+  <br><br>
+  <button onclick="realizarOperacion()">1</button>
+  <br><br>
+  <button onclick="unirTexto()">2</button>
+  <br><br>
+  <div id="resultado"></div>
+  <br><br>
+  <div id="resultadoTexto"></div>
+</body>
+</html>
+
+
+
+
+
+
+
